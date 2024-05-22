@@ -155,5 +155,10 @@ h3{
    
    }
 
-
+.boton{
+   border-radius: 5px;
+   width: 120px;
+   color: white;
+   background-color: rgb(13 , 110, 253);
+}
 

@@ -40,24 +40,36 @@
             </div>
         </nav>
     </header>
-        <form name="formulario" class="contenedorcontactos">
-                <div class="cajacontacto">
+    <div class="contenedoralt">
+        <div class="card">
+            <div class="card-body">
+        <form name="formulario" class="row g-3">
+            <dic class="col-md-3 text-cener">
+                <h4 class="ch4">Datos de Contacto</h4>
+            </dic>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
                     <h5>Nombre: </h5>
-                    <b><input type="text" name="nombre" size="40" maxlength="35" placeholder="Ingrese su nombre completo..."></b>
+                    <b><input type="text" name="nombre" size="30" maxlength="35" placeholder="Ingrese su nombre completo..."></b>
                 </div>
-                <div class="cajacontacto">
+                <div class="col-md-4 mb-3">
                     <h5>Apellido: </h5>
-                    <b><input type="text" name="apellido" size="40" maxlength="35" placeholder="Ingrese su apellido completo..."></b>
+                    <b><input type="text" name="apellido" size="30" maxlength="35" placeholder="Ingrese su apellido completo..."></b>
                 </div>
-                <div class="cajacontacto">
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
                     <h5>Correo electrónico: </h5>
-                    <b><input type="text" name="correoEl" size="40" maxlength="35" placeholder="Ingrese su correo electrónico..."></b>
+                    <b><input type="text" name="correoEl" size="30" maxlength="35" placeholder="Ingrese su correo electrónico..."></b>
                 </div>
-                <div class="cajacontacto">
+                <div class="col-md-4 mb-3">
                     <h5>Número celular: </h5>
-                    <b><input type="text" name="numero" size="40" maxlength="16" placeholder="Ingrese su número de teléfono..."></b>
+                    <b><input type="text" name="numero" size="30" maxlength="16" placeholder="Ingrese su número de teléfono..."></b>
                 </div>
-                <div class="cajacontacto">
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
                     <h5>Género:</h5>
                     <b>
                         <select name=genero>
@@ -68,7 +80,7 @@
                         </select>
                     </b>
                 </div>
-                <div class="cajacontacto">
+                <div class="col-md-3">
                     <h5>Preferencia</h5>
                     <b>
                         <select name=pref>
@@ -79,20 +91,53 @@
                         </select>
                     </b>             
                 </div>
-                <div class="caja-texto">
-                    <p>Comentarios</p>
-                    <textarea name="comentarioCli" id=""></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="eti1">Comentarios</p>
+                    <textarea name="comentarioCli" cols="60" rows="4" id=""></textarea>
 
                 </div>
-
-                <div class="contenedoralt">
-                <div class="caja-contacto">
-                <h5>
-                    <input type="button" value="Enviar" onclick="valida_envia()">
-                </h5>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pt-3 text-center">
+                    <input type="button" value="Enviar datos" class="boton" onclick="valida_envia()">
                 </div>
-                </div>
+            </div>
         </form>
+            </div>
+        </div>
+    </div>
 
+    <footer class="pie-pagina">
+        <div class="grupo-1"> 
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img id="logop" src="static/assets/Logo/logolis.png" alt="Logo de L.I.S." width="50">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Transformamos ideas en soluciones web.</p>
+                <p>Construimos tu presencia online.</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">            
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>     
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>@copyright, 2024 <b>Logo Grupo 2 </b> Todos los derechos reservados </small>
+        </div>
+    </footer>
+</body>
+</html>
 </body>
 </html>
