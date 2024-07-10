@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js"crossorigin="anonymous"></script>
     <script src="static/scripts/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="static/scripts/crud-users-fetch.js"></script>
     <title>contacto</title>
 </head>
 <body>
@@ -44,6 +46,7 @@
         <div class="card">
             <div class="card-body">
         <form name="formulario" class="row g-3">
+            <form action="#" id="form-user">
             <dic class="col-md-3 text-cener">
                 <h4 class="ch4">Datos de Contacto</h4>
             </dic>
@@ -51,28 +54,28 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>Nombre: </h5>
-                    <b><input type="text" name="nombre" size="30" maxlength="35" placeholder="Ingrese su nombre completo..."></b>
+                    <b><input type="text" class="input-search" name="nombre" id="nombre" size="30" maxlength="35" placeholder="Ingrese su nombre completo..."></b>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Apellido: </h5>
-                    <b><input type="text" name="apellido" size="30" maxlength="35" placeholder="Ingrese su apellido completo..."></b>
+                    <b><input type="text" class="input-search" name="apellido" id="apellido" size="30" maxlength="35" placeholder="Ingrese su apellido completo..."></b>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>Correo electrónico: </h5>
-                    <b><input type="text" name="correoEl" size="30" maxlength="35" placeholder="Ingrese su correo electrónico..."></b>
+                    <b><input type="text" class="input-search" name="correoEl" id="correo" size="30" maxlength="35" placeholder="Ingrese su correo electrónico..."></b>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Número celular: </h5>
-                    <b><input type="text" name="numero" size="30" maxlength="16" placeholder="Ingrese su número de teléfono..."></b>
+                    <b><input type="text" class="input-search" name="numero" id="num_tel" size="30" maxlength="16" placeholder="Ingrese su número de teléfono..."></b>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>Género:</h5>
                     <b>
-                        <select name=genero>
+                        <select name=genero id="gen">
                             <option value="Elegir">Elegir
                             <option value="Femenino">Femenino
                             <option value="Masculino">Masculino
@@ -83,7 +86,7 @@
                 <div class="col-md-3">
                     <h5>Preferencia</h5>
                     <b>
-                        <select name=pref>
+                        <select name=pref id="pref">
                             <option value="Elegir">Elegir
                             <option value="Lenceria">Lenceria
                             <option value="Ropa Deportiva">Ropa Deportiva
@@ -95,19 +98,41 @@
             <div class="row">
                 <div class="col-md-8">
                     <p class="eti1">Comentarios</p>
-                    <textarea name="comentarioCli" cols="60" rows="4" id=""></textarea>
+                    <textarea name="comentarioCli" cols="60" rows="4" id="comentario"></textarea>
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 pt-3 text-center">
-                    <input type="button" value="Enviar datos" class="boton" onclick="valida_envia()">
+                    <input type="button" value="Enviar datos" id="btn-save-user" class="boton" onclick="valida_envia()">
                 </div>
             </div>
+            </form>
         </form>
             </div>
         </div>
+        <input type="hidden" name="id_usuario" id="id-user">
     </div>
+
+    <section id="list" class="container">
+        <h3 class="subtitle">Nuestros clientes</h3>
+        <table id="list-table-usuarios" class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>                        
+                    <th>Correo</th>
+                    <th>Numero de telefono</th>
+                    <th>Genero</th>
+                    <th>Preferencia</th>
+                    <th>Comentario</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-table-usuarios">
+                
+            </tbody>
+        </table>
+    </section>
 
     <footer class="pie-pagina">
         <div class="grupo-1"> 
